@@ -161,7 +161,7 @@ func main() {
 			fmt.Println("Finalizando programa!")
 			break
 		default:
-			fmt.Println("Digite uma opção válida")
+			fmt.Println("Opção inválida. Escolhe uma das disponíveis!")
 		}
 		// sleep para visualizar o resultado
 		time.Sleep(2 * time.Second)
