@@ -6,6 +6,7 @@ import (
 	"math"
 )
 
+// Exibir display de escolha para o usuário
 func display() string {
 	fmt.Println("Calculadora de Geometria Plana e Espacial")
 	fmt.Println("(1) Triângulo equilátero")
@@ -17,7 +18,7 @@ func display() string {
 	fmt.Println("(7) Paralelepîpedo	")
 	fmt.Println("(8) Esfera")
 	fmt.Println("(0) Sair")
-	fmt.Print("Digite a sua opção:")
+	fmt.Print("Digite a sua opção: ")
 	//fmt.Scanln(&opcao)
 	return ""
 }
@@ -82,78 +83,77 @@ func main() {
 	case 1:
 		var base, altura float32
 		// No menu apresentado trata-se de um triângulo equilátero
-		fmt.Println("Digite a base do triângulo")
+		fmt.Print("Digite a base do triângulo: ")
 		fmt.Scanln(&base)
-		fmt.Println("Digite a altura do triângulo")
+		fmt.Print("Digite a altura do triângulo: ")
 		fmt.Scanln(&altura)
 		area, perimetro := triangulo(base, altura)
 		fmt.Println("A área do Triângulo é ", area)
 		fmt.Println("O perímetro do Triângulo é ", perimetro)
 	case 2:
 		var base, altura float32
-		fmt.Println("Digite a base do retângulo")
+		fmt.Print("Digite a base do retângulo: ")
 		fmt.Scanln(&base)
-		fmt.Println("Digite a altura do retângulo")
+		fmt.Print("Digite a altura do retângulo: ")
 		fmt.Scanln(&altura)
 		area, perimetro := retangulo(base, altura)
 		fmt.Println("A área do Retângulo é ", area)
 		fmt.Println("O perímetro do Retângulo é ", perimetro)
 	case 3:
 		var lado float32
-		fmt.Println("Digite o lado do quadrado")
+		fmt.Print("Digite o lado do quadrado: ")
 		fmt.Scanln(&lado)
 		area, perimetro := quadrado(lado)
 		fmt.Println("A área do Quadrado é ", area)
 		fmt.Println("O perímetro do Quadrado é ", perimetro)
 	case 4:
 		var raio float32
-		fmt.Println("Digite o raio do círculo")
+		fmt.Print("Digite o raio do círculo: ")
 		fmt.Scanln(&raio)
 		area, perimetro := circulo(raio)
 		fmt.Println("A área do Círculo é ", area)
 		fmt.Println("O perímetro do Círculo é ", perimetro)
 	case 5:
 		var areabase, arealateral, altura float32
-		fmt.Println("Digite a área da base da pirâmide")
+		fmt.Print("Digite a área da base da pirâmide: ")
 		fmt.Scanln(&areabase)
-		fmt.Println("Digite a área lateral da pirâmide")
+		fmt.Print("Digite a área lateral da pirâmide: ")
 		fmt.Scanln(&arealateral)
-		fmt.Println("Digite a altura da pirâmide")
+		fmt.Print("Digite a altura da pirâmide: ")
 		fmt.Scanln(&altura)
 		area, volume := piramide(areabase, arealateral, altura)
 		fmt.Println("A área da Pirâmide com base quadrangular é ", area)
 		fmt.Println("O volume da Pirâmide com base quadrangular é ", volume)
 	case 6:
 		var raio float32
-		fmt.Println("Digite o raio do cubo")
+		fmt.Print("Digite o raio do cubo: ")
 		fmt.Scanln(&raio)
 		area, volume := cubo(raio)
 		fmt.Println("A área do Cubo é ", area)
 		fmt.Println("O volume do Cubo é ", volume)
 	case 7:
 		var aresta1, aresta2, aresta3 float32
-		fmt.Println("Digite o valor da aresta1 do paralelepípedo")
+		fmt.Print("Digite o valor da aresta1 do paralelepípedo: ")
 		fmt.Scanln(&aresta1)
-		fmt.Println("Digite o valor da aresta2 do paralelepípedo")
+		fmt.Print("Digite o valor da aresta2 do paralelepípedo: ")
 		fmt.Scanln(&aresta2)
-		fmt.Println("Digite o valor da aresta3 do paralelepípedo")
+		fmt.Print("Digite o valor da aresta3 do paralelepípedo: ")
 		fmt.Scanln(&aresta3)
 		area, volume := paralelepipedo(aresta1, aresta2, aresta3)
 		fmt.Println("A área do Paralelepípedo é ", area)
 		fmt.Println("O volume do Paralelepîpedo é ", volume)
 	case 8:
 		var raio float32
-		fmt.Println("Digite o raio da esfera")
+		fmt.Print("Digite o raio da esfera: ")
 		fmt.Scanln(&raio)
 		area, volume := esfera(raio)
 		fmt.Println("A área da Esfera é ", area)
 		fmt.Println("O volume da Esfera é ", volume)
 	case 0:
-		fmt.Println("Finalizando programa")
+		fmt.Println("Finalizando programa!")
 		break
 	default:
 		fmt.Println("Digite uma opção válida")
-
 	}
 
 }
