@@ -74,10 +74,10 @@ func esfera(raio float32) (float32, float32) {
 func main() {
 	fmt.Println(math.Pi)
 	var op int
+
+	//fmt.Scanln(&op)
 	fmt.Println(display())
 	fmt.Scanln(&op)
-	//fmt.Scanln(&op)
-
 	switch op {
 	case 1:
 		var base, altura float32
@@ -148,6 +148,11 @@ func main() {
 		area, volume := esfera(raio)
 		fmt.Println("A área da Esfera é ", area)
 		fmt.Println("O volume da Esfera é ", volume)
+	case 0:
+		fmt.Println("Finalizando programa")
+		break
+	default:
+		fmt.Println("Digite uma opção válida")
 
 	}
 
