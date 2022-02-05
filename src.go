@@ -53,7 +53,7 @@ func player(nome string, vez chan bool) {
 		if aux == 0 || aux == 1 || aux == 2 {
 			fmt.Println(nome, " acertou a bola no campo adversário.")
 			// Sleep para simular o tempo da jogada do Jogador
-			//time.Sleep(1 * time.Second)
+			time.Sleep(1 * time.Second)
 		} else {
 			// 50% de chance de perder o ponto por não ter acertado a bola, ou jogar a bola para fora!
 			aux2 := rand.Intn(2)
@@ -79,7 +79,7 @@ func player(nome string, vez chan bool) {
 			// Incrementa o número da rodada
 			set++
 		}
-		// Chegar se está na primeira rodada de Matchpoint
+		// Checar se está na primeira rodada de Matchpoint
 		if (pontos1 == pontosPartida-1 || pontos2 == pontosPartida-1) && matchpoint == 0 {
 			fmt.Println("ATENÇÃO: PRIMEIRA RODADA DE MATCHPOINT")
 			matchpoint++
